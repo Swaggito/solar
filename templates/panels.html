@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Solar Panels Calculation</h2>
+    <form action="/panels" method="POST">
+        <label for="monthly_usage">Monthly Electricity Usage (kWh):</label>
+        <input type="number" id="monthly_usage" name="monthly_usage" required>
+        <br><br>
+        <label for="panel_wattage">Solar Panel Wattage (W):</label>
+        <input type="number" id="panel_wattage" name="panel_wattage" required>
+        <br><br>
+        <label for="location">Location:</label>
+        <select id="location" name="location" required>
+            <option value="north">Northern Region</option>
+            <option value="south">Southern Region</option>
+            <option value="equator">Equatorial Region</option>
+        </select>
+        <br><br>
+        <button type="submit">Calculate</button>
+    </form>
+{% endblock %}

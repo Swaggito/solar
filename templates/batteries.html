@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Batteries Calculation</h2>
+    <form action="/batteries" method="POST">
+        <label for="daily_usage">Daily Electricity Usage (kWh):</label>
+        <input type="number" id="daily_usage" name="daily_usage" required>
+        <br><br>
+        <label for="battery_capacity">Battery Capacity (kWh):</label>
+        <input type="number" id="battery_capacity" name="battery_capacity" required>
+        <br><br>
+        <label for="depth_of_discharge">Depth of Discharge (%):</label>
+        <input type="number" id="depth_of_discharge" name="depth_of_discharge" required>
+        <br><br>
+        <button type="submit">Calculate</button>
+    </form>
+{% endblock %}
